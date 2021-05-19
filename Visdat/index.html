@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+
+        <meta charset="utf-8">
+        <title> </title>
+    </head>
+
+    <body>
+
+        <script src="wordcloud2.js/src/wordcloud2.js"></script>
+        <script>
+            var tags = [
+        ["c#", 601251],
+        ["java", 585413],
+        ["javascript", 557407],
+        ["php", 534590],
+        ["android", 466436],
+        ["jquery", 438303],
+        ["python", 274216],
+        ["c++", 269570]];
+
+            WordCloud(document.getElementById('cloud'),
+             { list: tags.map(function(word) { return [word[0], Math.round(word[1]/5500)];})}
+              );
+        </script>
+
+    <div id="cloud" style="width:640px;height:450px;position:relative;">
+    </div>  
+    </body>
+</html>
