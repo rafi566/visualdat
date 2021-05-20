@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <script src="wc.js/src/WordCloud2.js"></script>
+        <title>Rafi dhiyanda - 064001800026 - 2</title>
+        
+    </head>
+
+    <body>
+        <div id="cloud" style="width:950px;height:950px;position:relative;"></div>
+        <script>
+            var tags = [
+        ["Abdul Rochman", 225000],
+        ["Ahmad Zuhdi", 225000],
+        ["Agung Sediyono", 375000],
+        ["Agus Salim", 135000],
+        ["Anung Barlianto", 225000],
+        ["Dedy Sugiarto", 375000],
+        ["Dian Pratiwi", 420000],
+        ["Gatot Budi", 405000],
+        ["Is Mardianto", 375000],
+        ["Ratna Shofiati", 225000],
+        ["Syaifudin", 375000],
+        ["Syandra Sari", 510000],
+        ["Teddy Siswanto", 600000]
+        ];
+
+            WordCloud(document.getElementById('cloud'),
+             { list: tags.map(function(word) { return [word[0], Math.round(word[1]/5500)];})}
+              );
+        </script>
+
+    
+    </div>  
+    </body>
+</html>
