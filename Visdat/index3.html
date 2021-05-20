@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <script src="wc.js/src/WordCloud2.js"></script>
+        <title>Rafi dhiyanda - 064001800026 - 3</title>
+        <style>
+            #cloud { border-radius:3px;border:1px solid #d0d0d0;}
+            #cloud span { cursor: pointer; }
+        </style>
+    </head>
+
+    <body>
+        <div id="cloud" style="width:640px;text-align:center;line-height: 2em;margin-top: 0.5em;"></div>
+        <script>
+            var tags = [
+        ["c#", 601251],
+        ["java", 585413],
+        ["javascript", 557407],
+        ["php", 534590],
+        ["android", 466436],
+        ["jquery", 438303],
+        ["python", 274216],
+        ["c++", 269570]];
+
+            //WordCloud(document.getElementById('cloud'),
+             //{ list: tags.map(function(word) { return [word[0], Math.round(word[1]/5500)];})}
+              //);
+
+            var clicked = function(ev) {
+                if (ev.target.nodeName === "SPAN") {
+                    var tag = ev.target.textContent;
+                    var tagElem;
+                    if (tags.some(function(el) { if (el[0] === tag) {tagElem = el; return true;} return false; })) {
+                        " jumlah pengguna bahasa " + tag + " di Eropa";
+                    }
+                } else {
+                    document.getElementById("details").innerText = "";
+                }
+            }
+            document.getElementById("cloud").addEventListener("click", clicked)      
+        </script>
+
+    
+    </div>  
+    </body>
+</html>
